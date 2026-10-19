@@ -160,8 +160,10 @@ button { color: inherit; }
   .navbar { gap: 8px; }
   .navbar > .brand { order: 0; gap: 6px; font-size: 12px; }
   .navbar > .brand .brand-mark { width: 30px; }
-  .navbar > .nav-link-syllabus { order: 1; min-height: 34px; margin-left: auto; padding-inline: 8px; font-size: 10px; }
-  .navbar > .nav-toggle { order: 2; margin-left: 0; }
-  .navbar > .nav-links { order: 3; }
+  .navbar > .nav-toggle { order: 1; margin-left: 0; }
+  .navbar > .nav-links { order: 2; }
+  .nav-links .nav-link-syllabus { min-height: 0; justify-content: flex-start; padding: 12px 5px; border: 0; border-radius: 0; background: transparent; color: var(--ink-soft); font-size: 13px; }
+  .nav-links .nav-link-syllabus:hover, .nav-links .nav-link-syllabus.active { background: transparent; color: var(--teal); }
+  .nav-links .nav-link-syllabus.active::after { display: block; }
 }
-@media (max-width: 360px) { .navbar > .brand { font-size: 11px; }.navbar > .nav-link-syllabus { padding-inline: 6px; font-size: 9px; }.navbar > .nav-toggle { width: 36px; height: 36px; } }
+@media (max-width: 360px) { .navbar > .brand { font-size: 11px; }.navbar > .nav-toggle { width: 36px; height: 36px; } }

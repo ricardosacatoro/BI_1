@@ -20,7 +20,7 @@
     document.getElementById('hero-code').textContent = `${data.general.code} · CICLO ${data.general.cycleNumber} · PARALELO ${data.general.parallel}`;
     document.getElementById('hero-institution').textContent = `${data.general.university} · Sede ${data.general.campus} · Facultad ${data.general.faculty}`;
     document.getElementById('silabo-title').textContent = data.general.subject;
-    document.getElementById('hero-description').textContent = 'Explora el plan de estudios, descubre las fechas importantes y practica con desafíos interactivos de BI.';
+    document.getElementById('hero-description').textContent = 'Información esencial del curso: objetivos, contenidos, dedicación académica y evaluaciones del periodo.';
     document.getElementById('subject-description').textContent = data.description;
     document.getElementById('subject-objective').textContent = data.objective;
     document.getElementById('graduate-contribution').textContent = data.graduateContribution;
@@ -96,20 +96,10 @@
     </details>`).join('');
   }
 
-  function renderSkillsAndProject() {
-    document.getElementById('skill-grid').innerHTML = data.softSkills.map((skill, index) => `<article class="skill-card"><span class="skill-icon" aria-hidden="true">${escapeHtml(skill.icon)}</span><span class="skill-index">0${index + 1}</span><h3>${escapeHtml(skill.name)}</h3><p>${escapeHtml(skill.description)}</p></article>`).join('');
+  function renderProject() {
     document.getElementById('project-title').textContent = data.project.title;
     document.getElementById('project-description').textContent = data.project.description;
     document.getElementById('project-tags').innerHTML = ['Copernicus', 'CMEMS', 'CEIPA', 'Dashboards · KPIs · alertas'].map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
-  }
-
-  function renderBibliography() {
-    const groups = [
-      ['BÁSICA / ELIBRO UTC', data.bibliography.basic],
-      ['COMPLEMENTARIA', data.bibliography.complementary],
-      ['SITIOS WEB RECOMENDADOS', data.bibliography.websites]
-    ];
-    document.getElementById('bibliography-groups').innerHTML = groups.map(([title, references], groupIndex) => `<section class="bibliography-group"><div class="bibliography-group-heading"><span>0${groupIndex + 1}</span><h3>${title}</h3></div><ol>${references.map((reference) => `<li><a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener">${escapeHtml(reference.title)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ol></section>`).join('');
   }
 
   function renderTeacher() {
@@ -126,8 +116,7 @@
   renderGeneral();
   renderEvaluations();
   renderUnits();
-  renderSkillsAndProject();
-  renderBibliography();
+  renderProject();
   renderTeacher();
   window.setInterval(updateCountdown, 60000);
 })();

@@ -1,6 +1,6 @@
 # Aula de datos: fundamentos de Business Intelligence
 
-Sitio educativo de tres páginas construido con HTML5, CSS3 y JavaScript vanilla. Presenta conceptos de BI, un proceso ETL interactivo, un cuestionario gamificado, un dashboard de ejemplo de la Liga Pro Ecuador 2026 y una página del sílabo UTC con minijuegos.
+Sitio educativo de tres páginas construido con HTML5, CSS3 y JavaScript vanilla. Presenta conceptos de BI, un proceso ETL interactivo, un cuestionario, un dashboard de ejemplo de la Liga Pro Ecuador 2026 y un resumen académico del sílabo UTC.
 
 Los resultados de la liga son sintéticos y se muestran exclusivamente con fines educativos. No representan estadísticas oficiales.
 
@@ -17,7 +17,6 @@ Los resultados de la liga son sintéticos y se muestran exclusivamente con fines
 │   ├── quiz.css
 │   ├── dashboard.css
 │   ├── silabo.css
-│   └── games.css
 ├── js/
 │   ├── main.js
 │   ├── quiz.js
@@ -25,7 +24,6 @@ Los resultados de la liga son sintéticos y se muestran exclusivamente con fines
 │   ├── dashboard.js
 │   ├── silabo-data.js
 │   ├── silabo.js
-│   └── games.js
 └── img/
 ```
 
@@ -45,10 +43,10 @@ En `js/quiz.js`, modifica el arreglo `questions`. Cada objeto incluye `topic`, `
 
 En `js/data.js`, ajusta los equipos, su fortaleza simulada, capacidad estimada del estadio y lista de goleadores. El calendario genera 30 fechas de ida y vuelta de forma reproducible; los marcadores, tarjetas y asistencia se derivan de esos valores. `js/dashboard.js` contiene los filtros, agregaciones y visualizaciones. Chart.js se carga desde CDN en `dashboard.html`.
 
-## Sílabo y minijuegos
+## Sílabo
 
-Abre `silabo.html` para consultar la ficha, las evaluaciones con cuenta regresiva, las unidades, habilidades, proyecto, bibliografía y perfil docente. Los cuatro minijuegos guardan XP, mejores marcas e insignias en `localStorage` con la clave `utc-silabo-progress-v1`.
+Abre `silabo.html` para consultar los datos generales de la asignatura, su objetivo, distribución horaria, fechas de evaluación, unidades, proyecto articulador y perfil docente.
 
-Todo el contenido editable de esa página, incluidos temas y horas por unidad, fechas, enlaces bibliográficos, parejas de memoria y banco de trivia, está centralizado en `js/silabo-data.js`. Conserva los identificadores de unidades y evaluaciones al editar para que el rompecabezas y el reto de calendario sigan relacionando correctamente los datos. `js/silabo.js` renderiza el contenido y la cuenta regresiva; `js/games.js` contiene las reglas y la puntuación.
+El contenido editable está centralizado en `js/silabo-data.js`. `js/silabo.js` renderiza la ficha y la cuenta regresiva de evaluaciones.
 
 El tema seleccionado se conserva en `localStorage` con la clave `aula-datos-theme`.
