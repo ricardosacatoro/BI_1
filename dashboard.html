@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard interactivo de ejemplo sobre la Liga Pro Ecuador 2026.">
+  <meta name="theme-color" content="#f4f7f5">
+  <title>Dashboard Liga Pro 2026 | Aula de datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="index.html" aria-label="Aula de datos, inicio"><span class="brand-mark" aria-hidden="true">A<span>.</span></span><span>Aula de datos</span></a>
+      <button class="nav-toggle icon-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" href="index.html">Fundamentos BI</a>
+        <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard Liga Pro</a>
+        <button class="theme-toggle icon-button" type="button" aria-label="Activar modo oscuro" title="Cambiar tema"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+      </div>
+    </nav>
+  </header>
+  <main id="contenido" class="container dashboard-main">
+    <section class="dashboard-heading" aria-labelledby="dashboard-title">
+      <div><p class="eyebrow"><span class="eyebrow-dot"></span> CENTRO DE ANÁLISIS / FÚTBOL ECUATORIANO</p><h1 id="dashboard-title">Liga Pro <span>2026</span></h1><p class="dashboard-intro">Rendimiento de temporada, resultados y tendencias de los equipos.</p></div>
+      <p class="simulation-notice"><span aria-hidden="true">ⓘ</span> Datos simulados con fines educativos</p>
+    </section>
+
+    <section class="filter-panel" aria-label="Filtros del dashboard">
+      <div class="filter-heading"><span class="filter-label">FILTRAR TEMPORADA</span><button class="reset-button" id="reset-filters" type="button"><span aria-hidden="true">↺</span> Restablecer</button></div>
+      <div class="filter-controls">
+        <label class="filter-field">Equipo<select id="team-filter"><option value="all">Todos los equipos</option></select></label>
+        <label class="filter-field range-field">Desde fecha<span class="range-control"><input id="date-start" type="range" min="1" max="30" value="1"><output id="date-start-value" for="date-start">1</output></span></label>
+        <label class="filter-field range-field">Hasta fecha<span class="range-control"><input id="date-end" type="range" min="1" max="30" value="30"><output id="date-end-value" for="date-end">30</output></span></label>
+        <label class="filter-field">Condición<select id="venue-filter"><option value="all">Local y visitante</option><option value="home">Local</option><option value="away">Visitante</option></select></label>
+        <label class="filter-field">Métrica principal<select id="metric-filter"><option value="points">Puntos</option><option value="goalsFor">Goles a favor</option></select></label>
+      </div>
+    </section>
+
+    <section class="kpi-grid" aria-label="Indicadores principales" aria-live="polite">
+      <article class="kpi-card"><div class="kpi-top"><span>PARTIDOS</span><span class="kpi-icon" aria-hidden="true">▦</span></div><strong id="kpi-matches">—</strong><div class="kpi-foot"><span class="trend-mark">↗</span><span id="kpi-matches-note">En el rango seleccionado</span></div></article>
+      <article class="kpi-card kpi-accent"><div class="kpi-top"><span>GOLES TOTALES</span><span class="kpi-icon" aria-hidden="true">◎</span></div><strong id="kpi-goals">—</strong><div class="kpi-foot"><span class="trend-mark">↗</span><span id="kpi-goals-note">En el rango seleccionado</span></div></article>
+      <article class="kpi-card"><div class="kpi-top"><span>GOLES / PARTIDO</span><span class="kpi-icon" aria-hidden="true">⌁</span></div><strong id="kpi-average">—</strong><div class="kpi-foot"><span class="trend-mark">≈</span><span>Promedio de temporada</span></div></article>
+      <article class="kpi-card"><div class="kpi-top"><span>EQUIPO LÍDER</span><span class="kpi-icon" aria-hidden="true">♛</span></div><strong class="kpi-team" id="kpi-leader">—</strong><div class="kpi-foot"><span class="trend-mark">↑</span><span id="kpi-leader-note">Por puntos</span></div></article>
+      <article class="kpi-card"><div class="kpi-top"><span>MÁXIMO GOLEADOR</span><span class="kpi-icon" aria-hidden="true">✦</span></div><strong class="kpi-team" id="kpi-scorer">—</strong><div class="kpi-foot"><span class="trend-mark">⚽</span><span id="kpi-scorer-note">— goles</span></div></article>
+      <article class="kpi-card"><div class="kpi-top"><span>ASISTENCIA / PARTIDO</span><span class="kpi-icon" aria-hidden="true">⌂</span></div><strong id="kpi-attendance">—</strong><div class="kpi-foot"><span class="trend-mark">◉</span><span>Espectadores estimados</span></div></article>
+    </section>
+
+    <section class="chart-grid" aria-label="Visualizaciones de temporada">
+      <article class="dashboard-panel chart-panel standings-chart-panel"><div class="panel-heading"><div><p class="eyebrow">TABLA DE RENDIMIENTO</p><h2 id="main-chart-title">Puntos por equipo</h2></div><span class="chart-period" id="chart-period">FECHAS 1–30</span></div><div class="chart-wrap chart-wrap-tall"><canvas id="main-chart" role="img" aria-label="Gráfico de puntos por equipo"></canvas></div></article>
+      <article class="dashboard-panel chart-panel results-chart-panel"><div class="panel-heading"><div><p class="eyebrow">DESENLACES</p><h2>Resultados</h2></div><span class="panel-mark" aria-hidden="true">01</span></div><div class="chart-wrap chart-wrap-doughnut"><canvas id="results-chart" role="img" aria-label="Distribución de victorias locales, empates y victorias visitantes"></canvas></div><div class="result-summary" id="result-summary" aria-live="polite"></div></article>
+      <article class="dashboard-panel chart-panel trend-chart-panel"><div class="panel-heading"><div><p class="eyebrow">RITMO DE TEMPORADA</p><h2>Puntos acumulados</h2></div><label class="compact-select">Equipos<select id="trend-team-filter" multiple size="1" aria-label="Equipos para comparar en el gráfico de tendencia"></select></label></div><div class="chart-wrap"><canvas id="trend-chart" role="img" aria-label="Evolución de puntos acumulados por fecha"></canvas></div></article>
+      <article class="dashboard-panel chart-panel compare-chart-panel"><div class="panel-heading"><div><p class="eyebrow">CARA A CARA</p><h2>Comparativo de equipos</h2></div><div class="compare-selects"><label class="visually-hidden" for="compare-team-a">Primer equipo</label><select id="compare-team-a"></select><label class="visually-hidden" for="compare-team-b">Segundo equipo</label><select id="compare-team-b"></select></div></div><div class="chart-wrap"><canvas id="compare-chart" role="img" aria-label="Comparativo de rendimiento entre dos equipos"></canvas></div></article>
+    </section>
+
+    <section class="lower-grid" aria-label="Posiciones y goleadores">
+      <article class="dashboard-panel table-panel"><div class="panel-heading table-heading"><div><p class="eyebrow">CLASIFICACIÓN</p><h2>Tabla de posiciones</h2></div><label class="search-field"><span class="visually-hidden">Buscar equipo</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="team-search" type="search" placeholder="Buscar equipo" autocomplete="off"></label></div><div class="table-scroll"><table class="standings-table"><caption class="visually-hidden">Posiciones de los equipos en el campeonato</caption><thead><tr><th scope="col"><button class="sort-button" data-sort="position" type="button"># <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="name" type="button">Equipo <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="played" type="button">PJ <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="won" type="button">PG <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="drawn" type="button">PE <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="lost" type="button">PP <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="goalDifference" type="button">DG <span aria-hidden="true">↕</span></button></th><th scope="col"><button class="sort-button" data-sort="points" type="button">Pts <span aria-hidden="true">↕</span></button></th></tr></thead><tbody id="standings-body"></tbody></table></div><div class="table-legend"><span><i class="legend-mark legend-cup"></i> Zona de copas</span><span><i class="legend-mark legend-danger"></i> Zona de descenso</span></div></article>
+      <article class="dashboard-panel scorers-panel"><div class="panel-heading"><div><p class="eyebrow">BOTÍN DE ORO</p><h2>Top goleadores</h2></div><span class="panel-mark" aria-hidden="true">TOP 5</span></div><div id="scorer-list" class="scorer-list" aria-live="polite"></div><p class="scorer-note">Goles anotados en el periodo filtrado</p></article>
+    </section>
+    <p class="data-footnote">Simulación académica: nombres de equipos y jugadores de referencia; estadísticas generadas para fines educativos, no representan resultados oficiales.</p>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A<span>.</span></span><span>Aula de datos</span></a><p>Material educativo de Business Intelligence · Datos de ejemplo con fines didácticos.</p><span>© 2026 Aula de datos</span></div></footer>
+</body>
+</html>

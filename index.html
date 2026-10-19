@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Aprende los fundamentos de Business Intelligence, el proceso ETL y practica con un cuestionario interactivo.">
+	<meta name="theme-color" content="#f4f7f5">
+	<title>Fundamentos de BI | Aula de datos</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/quiz.css">
+	<script src="js/main.js" defer></script>
+	<script src="js/quiz.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header">
+		<nav class="navbar container" aria-label="Navegación principal">
+			<a class="brand" href="index.html" aria-label="Aula de datos, inicio">
+				<span class="brand-mark" aria-hidden="true">A<span>.</span></span>
+				<span>Aula de datos</span>
+			</a>
+			<button class="nav-toggle icon-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+			</button>
+			<div class="nav-links" id="nav-links">
+				<a class="nav-link active" aria-current="page" href="index.html">Fundamentos BI</a>
+				<a class="nav-link" href="dashboard.html">Dashboard Liga Pro</a>
+				<button class="theme-toggle icon-button" type="button" aria-label="Activar modo oscuro" title="Cambiar tema">
+					<svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<main id="contenido">
+		<section class="hero container" aria-labelledby="hero-title">
+			<div class="hero-copy">
+				<p class="eyebrow"><span class="eyebrow-dot"></span> APRENDE A DECIDIR CON DATOS</p>
+				<h1 id="hero-title">Los datos cuentan.<br><span>BI les da dirección.</span></h1>
+				<p class="hero-lede">Entiende cómo una organización convierte sus datos cotidianos en decisiones más claras, oportunas y valiosas.</p>
+				<div class="hero-actions">
+					<a class="button button-primary" href="#que-es-bi">Comenzar a aprender <span aria-hidden="true">↓</span></a>
+					<a class="text-link" href="#cuestionario">Ir al cuestionario <span aria-hidden="true">↗</span></a>
+				</div>
+				<div class="hero-meta"><span class="meta-rule"></span><span>Una guía interactiva · 8 min de lectura</span></div>
+			</div>
+			<div class="hero-art" aria-label="Ilustración de un flujo de información hacia decisiones" role="img">
+				<div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+				<div class="data-node node-a"><span class="node-glyph">▥</span><span>Datos</span></div>
+				<div class="data-node node-b"><span class="node-glyph">⌁</span><span>Patrones</span></div>
+				<div class="data-node node-c"><span class="node-glyph">↗</span><span>Acción</span></div>
+				<div class="hero-core"><span class="core-label">INSIGHT</span><strong>BI</strong><span class="core-dots">● ● ●</span></div>
+				<span class="art-caption">De la señal a la estrategia</span>
+			</div>
+		</section>
+
+		<section class="section section-paper" id="que-es-bi" aria-labelledby="bi-title">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="eyebrow">01 / EL CONCEPTO</p>
+					<h2 id="bi-title">¿Qué es la Inteligencia de Negocios?</h2>
+					<p>Business Intelligence (BI) reúne procesos, tecnologías y prácticas para transformar datos en información útil para decidir.</p>
+				</div>
+				<div class="bi-layout">
+					<div class="bi-visual reveal" role="img" aria-label="Datos integrados y analizados se convierten en decisiones y resultados">
+						<div class="bi-flow">
+							<div class="flow-source"><span>01</span><b>Fuentes</b><small>Ventas · clientes · operaciones</small></div>
+							<div class="flow-connector" aria-hidden="true">→</div>
+							<div class="flow-hub"><span class="hub-ring"></span><b>BI</b><small>Analizar</small></div>
+							<div class="flow-connector" aria-hidden="true">→</div>
+							<div class="flow-source flow-outcome"><span>02</span><b>Decisiones</b><small>Acciones con evidencia</small></div>
+						</div>
+						<div class="visual-footnote"><span class="status-dot"></span> Un lenguaje común para toda la organización</div>
+					</div>
+					<div class="bi-copy reveal">
+						<h3>De mirar atrás a anticiparse</h3>
+						<p>BI integra datos dispersos, les da contexto y los presenta en reportes, indicadores y análisis que responden preguntas del negocio.</p>
+						<div class="benefit-list">
+							<div><span class="benefit-number">A</span><span><b>Ver el panorama</b><small>Una visión confiable y compartida del desempeño.</small></span></div>
+							<div><span class="benefit-number">B</span><span><b>Encontrar oportunidades</b><small>Detectar tendencias, riesgos y cambios a tiempo.</small></span></div>
+							<div><span class="benefit-number">C</span><span><b>Actuar con confianza</b><small>Priorizar recursos usando evidencia relevante.</small></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="decisiones" aria-labelledby="decisiones-title">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="eyebrow">02 / DEL DATO A LA ACCIÓN</p>
+					<h2 id="decisiones-title">BI y la toma de decisiones</h2>
+					<p>La pregunta cambia según el nivel; el valor de los datos está en responderla en el momento adecuado.</p>
+				</div>
+				<div class="decision-grid">
+					<article class="decision-card reveal"><span class="decision-index">01</span><div><h3>Estratégico</h3><p>Dirección de largo plazo. ¿En qué mercado conviene crecer?</p></div><span class="decision-horizon">AÑOS</span></article>
+					<article class="decision-card reveal"><span class="decision-index">02</span><div><h3>Táctico</h3><p>Asignación de recursos. ¿Qué campaña impulsa más ventas?</p></div><span class="decision-horizon">MESES</span></article>
+					<article class="decision-card reveal"><span class="decision-index">03</span><div><h3>Operativo</h3><p>Acción del día a día. ¿Qué producto debemos reponer hoy?</p></div><span class="decision-horizon">DÍAS</span></article>
+				</div>
+				<div class="knowledge-flow reveal" aria-label="Ciclo de creación de conocimiento">
+					<div class="knowledge-step"><span>01</span><b>Datos</b><small>Registros sin interpretar</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+					<div class="knowledge-step"><span>02</span><b>Información</b><small>Datos organizados</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+					<div class="knowledge-step"><span>03</span><b>Conocimiento</b><small>Contexto y patrones</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+					<div class="knowledge-step knowledge-final"><span>04</span><b>Decisión</b><small>Acción medible</small></div>
+				</div>
+				<p class="decision-example reveal"><span aria-hidden="true">↳</span> Ejemplo: al cruzar ventas históricas con inventario, una tienda detecta quiebres recurrentes y ajusta sus pedidos antes de la temporada alta.</p>
+			</div>
+		</section>
+
+		<section class="section section-ink" id="etl" aria-labelledby="etl-title">
+			<div class="container">
+				<div class="section-heading section-heading-light reveal">
+					<p class="eyebrow">03 / EL RECORRIDO DEL DATO</p>
+					<h2 id="etl-title">ETL: preparar para confiar</h2>
+					<p>El proceso ETL lleva datos desde sus fuentes hasta un destino analítico, con controles para que puedan usarse.</p>
+				</div>
+				<div class="etl-flow reveal" role="group" aria-label="Selecciona una fase del proceso ETL">
+					<button class="etl-phase is-active" type="button" data-etl-phase="extract" aria-pressed="true"><span class="etl-step">01</span><span class="etl-icon" aria-hidden="true">⇩</span><span class="etl-name">Extraer</span><span class="etl-desc">Conectar con las fuentes</span></button>
+					<span class="etl-link" aria-hidden="true"></span>
+					<button class="etl-phase" type="button" data-etl-phase="transform" aria-pressed="false"><span class="etl-step">02</span><span class="etl-icon" aria-hidden="true">⟳</span><span class="etl-name">Transformar</span><span class="etl-desc">Limpiar y dar forma</span></button>
+					<span class="etl-link" aria-hidden="true"></span>
+					<button class="etl-phase" type="button" data-etl-phase="load" aria-pressed="false"><span class="etl-step">03</span><span class="etl-icon" aria-hidden="true">⇧</span><span class="etl-name">Cargar</span><span class="etl-desc">Guardar para analizar</span></button>
+				</div>
+				<div class="etl-detail reveal" aria-live="polite">
+					<div class="etl-description"><p class="eyebrow" id="etl-kicker">FASE 01</p><h3 id="etl-phase-title">Extraer: conectar con el origen</h3><p id="etl-phase-copy">Se recopilan datos de sistemas transaccionales, archivos, servicios web o sensores, respetando su frecuencia y formato.</p><div class="etl-techniques"><span class="technique-label">Técnicas</span><span id="etl-techniques">Conectores · consultas SQL · captura incremental</span></div><div class="etl-techniques"><span class="technique-label">Herramientas</span><span id="etl-tools">Fivetran · Airbyte · Apache NiFi</span></div></div>
+					<div class="etl-demo"><div class="demo-heading"><div><span class="eyebrow">VISTA DE DATOS</span><h3>Antes <span aria-hidden="true">→</span> después</h3></div><span class="live-tag"><span></span> DEMO</span></div><div class="table-scroll"><table class="data-table"><caption class="visually-hidden">Ejemplo de datos en la fase ETL seleccionada</caption><thead id="etl-table-head"></thead><tbody id="etl-table-body"></tbody></table></div></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-paper" id="casos" aria-labelledby="casos-title">
+			<div class="container">
+				<div class="section-heading reveal"><p class="eyebrow">04 / BI EN CONTEXTO</p><h2 id="casos-title">Decisiones que se vuelven reales</h2><p>El mismo enfoque analítico responde preguntas distintas en cada industria.</p></div>
+				<div class="case-grid">
+					<article class="case-card reveal"><div class="case-top"><span class="case-icon" aria-hidden="true">▤</span><span class="case-category">RETAIL</span></div><h3>Menos faltantes, mejor compra</h3><dl><div><dt>Problema</dt><dd>Productos agotados pese a tener inventario inmovilizado.</dd></div><div><dt>Datos</dt><dd>Ventas por tienda, existencias y estacionalidad.</dd></div><div><dt>Decisión</dt><dd>Reponer según demanda prevista por sucursal.</dd></div></dl></article>
+					<article class="case-card reveal"><div class="case-top"><span class="case-icon" aria-hidden="true">◈</span><span class="case-category">BANCA</span></div><h3>Riesgo visible antes de aprobar</h3><dl><div><dt>Problema</dt><dd>Evaluaciones de crédito lentas y dispares.</dd></div><div><dt>Datos</dt><dd>Historial de pago, ingresos y comportamiento.</dd></div><div><dt>Decisión</dt><dd>Priorizar revisiones y ajustar políticas de riesgo.</dd></div></dl></article>
+					<article class="case-card reveal"><div class="case-top"><span class="case-icon" aria-hidden="true">＋</span><span class="case-category">SALUD</span></div><h3>Atención con recursos a tiempo</h3><dl><div><dt>Problema</dt><dd>Demoras variables en consulta externa.</dd></div><div><dt>Datos</dt><dd>Turnos, tiempos de espera y demanda por especialidad.</dd></div><div><dt>Decisión</dt><dd>Redistribuir horarios de atención en horas pico.</dd></div></dl></article>
+					<article class="case-card reveal"><div class="case-top"><span class="case-icon" aria-hidden="true">◎</span><span class="case-category">DEPORTE</span></div><h3>Preparar el siguiente partido</h3><dl><div><dt>Problema</dt><dd>Identificar dónde se pierden oportunidades de gol.</dd></div><div><dt>Datos</dt><dd>Tiros, posesión, resultados y rendimiento por fecha.</dd></div><div><dt>Decisión</dt><dd>Ajustar entrenamientos y estrategia del equipo.</dd></div></dl></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section quiz-section" id="cuestionario" aria-labelledby="quiz-title">
+			<div class="container">
+				<div class="section-heading reveal"><p class="eyebrow">05 / PON A PRUEBA LO APRENDIDO</p><h2 id="quiz-title">Reto de inteligencia de negocios</h2><p>Diez preguntas. Tres vidas. ¿Cuántos puntos puedes conseguir?</p></div>
+				<div class="quiz-shell reveal" id="quiz-app" aria-live="polite">
+					<div class="quiz-start" id="quiz-start">
+						<div class="quiz-badge" aria-hidden="true">BI<span>!</span></div>
+						<div class="quiz-start-copy"><p class="eyebrow">LISTA TU CRITERIO</p><h3>¿Te animas al reto?</h3><p>Responde antes de que termine el tiempo para ganar puntos extra. El mejor puntaje queda guardado en este dispositivo.</p><button class="button button-primary" type="button" id="quiz-start-button">Comenzar reto <span aria-hidden="true">→</span></button></div>
+						<div class="best-score"><span>MEJOR PUNTAJE</span><strong id="best-score-value">0</strong><small>puntos</small></div>
+					</div>
+					<div class="quiz-game" id="quiz-game" hidden>
+						<div class="quiz-topline"><div class="quiz-progress-label"><span id="question-counter">Pregunta 1 de 10</span><span id="score-label">0 puntos</span></div><div class="progress-track" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="quiz-progress"></span></div><div class="quiz-status"><span class="streak-indicator" id="streak-indicator" aria-label="Racha de 0 aciertos">♨ <b id="streak-count">0</b></span><span class="lives" id="lives-indicator" aria-label="3 vidas restantes">♥ ♥ ♥</span></div></div>
+						<div class="timer-row"><span>TIEMPO</span><div class="timer-track" role="progressbar" aria-label="Tiempo para responder" aria-valuemin="0" aria-valuemax="20" aria-valuenow="20"><span id="quiz-timer-bar"></span></div><strong id="quiz-timer">20</strong></div>
+						<div class="question-area" id="question-area"><p class="eyebrow" id="question-topic">CONCEPTOS BI</p><h3 id="question-text" tabindex="-1"></h3><div class="answer-grid" id="answer-options"></div><div class="quiz-feedback" id="quiz-feedback" role="status" aria-live="assertive" hidden></div></div>
+						<button class="button button-primary quiz-next" id="quiz-next" type="button" hidden>Siguiente pregunta <span aria-hidden="true">→</span></button>
+					</div>
+					<div class="quiz-result" id="quiz-result" hidden tabindex="-1"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="dashboard-cta" aria-labelledby="cta-title">
+			<div class="container cta-inner reveal"><div><p class="eyebrow">SIGUIENTE PARADA / DATOS EN ACCIÓN</p><h2 id="cta-title">Ahora mira BI en una cancha.</h2><p>Explora un dashboard interactivo con una temporada ficticia de la Liga Pro Ecuador 2026.</p></div><a class="button button-light" href="dashboard.html">Explorar el dashboard <span aria-hidden="true">↗</span></a><div class="cta-score" aria-hidden="true"><span>90'</span><span>BI</span><span>2026</span></div></div>
+		</section>
+	</main>
+
+	<footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A<span>.</span></span><span>Aula de datos</span></a><p>Material educativo de Business Intelligence · Datos de ejemplo con fines didácticos.</p><span>© 2026 Aula de datos</span></div></footer>
+</body>
+</html>
