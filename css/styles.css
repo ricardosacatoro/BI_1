@@ -127,14 +127,14 @@ button { color: inherit; }
 .knowledge-step > span { grid-row: span 2; color: var(--teal); font-size: 10px; font-weight: 800; }.knowledge-step b { font-family: var(--font-display); font-size: 13px; }.knowledge-step small { color: var(--ink-soft); font-size: 10px; }
 .knowledge-final b { color: var(--teal); }.flow-arrow { color: var(--teal); }
 .decision-example { margin: 21px 0 0; color: var(--ink-soft); font-size: 13px; }.decision-example span { margin-right: 8px; color: var(--teal); font-weight: 800; }
-.section-ink { overflow: hidden; background: var(--surface-alt); color: var(--ink); }
+.section-ink { overflow: hidden; background: var(--surface); color: var(--ink); }
 .section-heading-light .eyebrow { color: var(--teal); }.section-heading-light > p:last-child { color: var(--ink-soft); }
 .etl-flow { display: flex; align-items: center; justify-content: center; margin: 0 0 35px; }
-.etl-phase { display: flex; width: 188px; min-height: 170px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: 21px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); text-align: left; cursor: pointer; transition: background .2s, border-color .2s, transform .2s; }
+.etl-phase { display: flex; width: 188px; min-height: 170px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: 21px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface-alt); color: var(--ink); text-align: left; cursor: pointer; transition: background .2s, border-color .2s, transform .2s; }
 .etl-phase:hover { transform: translateY(-3px); border-color: var(--teal); }.etl-phase.is-active { border-color: var(--teal); background: var(--teal-soft); }
 .etl-step { color: var(--teal); font-size: 10px; font-weight: 800; }.etl-icon { margin: 7px 0 4px; color: var(--teal); font-size: 26px; line-height: 1; }.etl-name { font-family: var(--font-display); font-size: 18px; font-weight: 800; }.etl-desc { color: var(--ink-soft); font-size: 11px; }
 .etl-link { position: relative; width: min(10vw, 76px); height: 1px; background: var(--teal); }.etl-link::after { position: absolute; top: -3px; right: 0; width: 7px; height: 7px; transform: rotate(45deg); border-top: 1px solid var(--teal); border-right: 1px solid var(--teal); content: ''; }
-.etl-detail { display: grid; grid-template-columns: .86fr 1.14fr; gap: 46px; padding: 32px; border: 1px solid var(--line); border-radius: 4px 25px 4px 4px; background: var(--surface); }
+.etl-detail { display: grid; grid-template-columns: .86fr 1.14fr; gap: 46px; padding: 32px; border: 1px solid var(--line); border-radius: 4px 25px 4px 4px; background: var(--surface-alt); }
 .etl-description .eyebrow { color: var(--teal); }.etl-description h3 { color: var(--ink); font-size: 21px; }.etl-description > p:not(.eyebrow) { color: var(--ink-soft); font-size: 13px; }
 .etl-techniques { display: grid; gap: 4px; margin-top: 18px; color: var(--ink-soft); font-size: 11px; }.technique-label { color: var(--teal); font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; }
 .demo-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }.demo-heading .eyebrow { margin-bottom: 4px; color: var(--teal); }.demo-heading h3 { margin: 0; color: var(--ink); font-family: var(--font-display); font-size: 17px; }.demo-heading h3 span { color: var(--teal); }

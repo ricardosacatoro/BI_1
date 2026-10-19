@@ -32,8 +32,15 @@
   <main id="contenido" class="container dashboard-main">
     <section class="dashboard-heading" aria-labelledby="dashboard-title">
       <div><p class="eyebrow"><span class="eyebrow-dot"></span> CENTRO DE ANÁLISIS / FÚTBOL ECUATORIANO</p><h1 id="dashboard-title">Liga Pro <span>2026</span></h1><p class="dashboard-intro">Rendimiento de temporada, resultados y tendencias de los equipos.</p></div>
-      <p class="simulation-notice"><span aria-hidden="true">ⓘ</span> Datos simulados con fines educativos</p>
+      <div class="dashboard-heading-tools">
+        <button class="button button-primary export-button" id="export-pdf" type="button" title="Abre el diálogo para guardar el reporte como PDF">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 18v3h16v-3"/></svg>
+          Generar reporte PDF
+        </button>
+        <p class="simulation-notice"><span aria-hidden="true">ⓘ</span> Datos simulados con fines educativos</p>
+      </div>
     </section>
+    <p class="report-print-meta" id="report-filter-summary"></p>
 
     <section class="filter-panel" aria-label="Filtros del dashboard">
       <div class="filter-heading"><span class="filter-label">FILTRAR TEMPORADA</span><button class="reset-button" id="reset-filters" type="button"><span aria-hidden="true">↺</span> Restablecer</button></div>

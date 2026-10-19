@@ -187,6 +187,13 @@
     document.getElementById('main-chart-title').textContent = elements.metric.value === 'points' ? 'Puntos por equipo' : 'Goles a favor por equipo';
   }
 
+  function updateReportSummary() {
+    const selectedTeam = elements.team.selectedOptions[0].textContent;
+    const selectedVenue = elements.venue.selectedOptions[0].textContent;
+    const selectedMetric = elements.metric.selectedOptions[0].textContent;
+    document.getElementById('report-filter-summary').textContent = `Filtros aplicados: ${selectedTeam} · Fechas ${elements.start.value}–${elements.end.value} · ${selectedVenue} · Métrica: ${selectedMetric}`;
+  }
+
   function updateMainChart(stats) {
     const metric = elements.metric.value;
     const ordered = [...stats].sort((first, second) => second[metric] - first[metric] || first.name.localeCompare(second.name, 'es'));
@@ -283,6 +290,7 @@
   function updateDashboard() {
     currentGames = getFilteredGames();
     const stats = calculateStats(currentGames);
+    updateReportSummary();
     updateKpis(currentGames, stats);
     updateMainChart(stats);
     updateResultsChart(currentGames);
@@ -357,6 +365,8 @@
     updateDashboard();
   });
   window.addEventListener('aula-theme-change', updateThemeColors);
+  document.getElementById('export-pdf').addEventListener('click', () => window.print());
+  window.addEventListener('beforeprint', () => Object.values(chartInstances).forEach((chart) => chart.resize()));
 
   createCharts();
   updateRangeLabels();
