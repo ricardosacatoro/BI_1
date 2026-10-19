@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora el sílabo de Sistemas de Información para la Inteligencia de Negocios y aprende jugando.">
+  <meta name="theme-color" content="#f4f7f5">
+  <title>Sílabo y Juegos | Aula de datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/silabo.css">
+  <link rel="stylesheet" href="css/games.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/silabo-data.js" defer></script>
+  <script src="js/silabo.js" defer></script>
+  <script src="js/games.js" defer></script>
+</head>
+<body class="silabo-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="index.html" aria-label="Aula de datos, inicio"><span class="brand-mark" aria-hidden="true">A<span>.</span></span><span>Aula de datos</span></a>
+      <button class="nav-toggle icon-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" href="index.html">Fundamentos BI</a>
+        <a class="nav-link" href="dashboard.html">Dashboard Liga Pro</a>
+        <a class="nav-link active" href="silabo.html" aria-current="page">Sílabo y Juegos</a>
+        <button class="theme-toggle icon-button" type="button" aria-label="Activar modo oscuro" title="Cambiar tema"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="silabo-hero" aria-labelledby="silabo-title">
+      <div class="container silabo-hero-inner">
+        <div class="silabo-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> UTC / CIYA / SISTEMAS DE INFORMACIÓN</p>
+          <p class="hero-kicker" id="hero-code"></p>
+          <p class="hero-institution" id="hero-institution"></p>
+          <h1 id="silabo-title"></h1>
+          <p class="silabo-hero-lede" id="hero-description"></p>
+          <a class="button button-primary" href="#juegos">Comenzar la aventura <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-orbit-art" aria-hidden="true"><span class="orbit-label orbit-label-a">DATA</span><span class="orbit-label orbit-label-b">BI</span><span class="orbit-label orbit-label-c">ACTION</span><span class="orbit-core">∞</span><i class="orbit-line orbit-line-one"></i><i class="orbit-line orbit-line-two"></i></div>
+        <div class="hero-index"><span>01</span><span>APRENDER</span><span>02</span><span>JUGAR</span><span>03</span><span>APLICAR</span></div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="resumen" aria-labelledby="summary-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">LA ASIGNATURA EN BREVE</p><h2 id="summary-title">Una ficha. Muchas formas de pensar.</h2><p id="subject-description"></p></div>
+        <div class="summary-layout">
+          <div class="general-grid reveal" id="general-cards" aria-label="Datos generales de la asignatura"></div>
+          <article class="hours-panel reveal" aria-labelledby="hours-title">
+            <div class="hours-heading"><div><p class="eyebrow">DEDICACIÓN</p><h3 id="hours-title">144 horas de aprendizaje</h3></div><span class="hours-total" id="hours-total"></span></div>
+            <div class="hours-chart-row"><div class="hours-donut" id="hours-donut" role="img"><span class="donut-center"><strong id="hours-center"></strong><small>horas</small></span></div><ul class="hours-legend" id="hours-legend"></ul></div>
+            <p class="hours-footnote">La suma de docencia, práctica y trabajo autónomo completa la carga de la asignatura.</p>
+          </article>
+        </div>
+        <div class="objective-strip reveal"><span class="objective-marker" aria-hidden="true">→</span><div><span class="eyebrow">OBJETIVO GENERAL</span><p id="subject-objective"></p></div></div>
+        <div class="contribution-line reveal"><span class="eyebrow">APORTE AL PERFIL DE EGRESO</span><p id="graduate-contribution"></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="evaluaciones" aria-labelledby="evaluation-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">MARCA EL RITMO</p><h2 id="evaluation-title">Fechas clave del periodo</h2><p>Cada evaluación cierra a las 23:59:59 de su fecha.</p></div>
+        <div class="countdown-banner reveal"><div class="countdown-copy"><span class="countdown-symbol" aria-hidden="true">◷</span><div><p class="eyebrow" id="countdown-label">PRÓXIMO CIERRE</p><h3 id="countdown-title" aria-live="polite">Calculando fecha…</h3></div></div><div class="countdown-clock" id="countdown" role="timer" aria-label="Cuenta regresiva a la próxima evaluación"></div></div>
+        <ol class="evaluation-timeline reveal" id="evaluation-timeline" aria-label="Cronograma de evaluaciones"></ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="unidades" aria-labelledby="units-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">EL MAPA DE APRENDIZAJE</p><h2 id="units-title">Tres unidades, una ruta hacia BI</h2><p>Abre cada unidad para explorar sus resultados, temas, actividades y evaluación.</p></div>
+        <div class="unit-list" id="unit-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="habilidades" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">APRENDER TAMBIÉN ES CRECER</p><h2 id="skills-title">Habilidades para trabajar con datos</h2><p>El criterio profesional combina herramientas, creatividad y responsabilidad.</p></div>
+        <div class="skill-grid" id="skill-grid"></div>
+      </div>
+    </section>
+
+    <section class="project-band" id="proyecto" aria-labelledby="project-title">
+      <div class="container project-inner reveal"><div class="project-index" aria-hidden="true">P<span>·</span>T</div><div class="project-copy"><p class="eyebrow">INVESTIGACIÓN FORMATIVA / PROYECTO ARTICULADOR</p><h2 id="project-title"></h2><p class="project-description" id="project-description"></p><div class="project-tags" id="project-tags"></div></div><div class="project-aside"><span>DE DATOS SATELITALES</span><b aria-hidden="true">↘</b><span>A ALERTAS TEMPRANAS</span></div></div>
+    </section>
+
+    <section class="section section-paper" id="bibliografia" aria-labelledby="bibliography-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">PARA SEGUIR EXPLORANDO</p><h2 id="bibliography-title">Bibliografía y recursos</h2><p>Lecturas y documentación para ampliar lo visto en clase.</p></div>
+        <div class="bibliography-groups" id="bibliography-groups"></div>
+      </div>
+    </section>
+
+    <section class="section teacher-section" id="docente" aria-labelledby="teacher-title">
+      <div class="container teacher-layout reveal"><div class="teacher-monogram" id="teacher-monogram" aria-hidden="true"></div><div class="teacher-copy"><p class="eyebrow">DOCENTE DE LA ASIGNATURA</p><h2 id="teacher-title"></h2><a class="teacher-email" id="teacher-email"></a><p id="teacher-profile"></p></div><div class="teacher-school"><span>UTC</span><span>CIYA</span><span>SISTEMAS<br>DE INFORMACIÓN</span></div></div>
+    </section>
+
+    <section class="section games-section" id="juegos" aria-labelledby="games-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">RETO DE APRENDIZAJE / 4 JUEGOS</p><h2 id="games-title">Aprende el sílabo jugando</h2><p>Explora la ruta, prueba tu memoria, responde la trivia y llega a tiempo a las evaluaciones.</p></div>
+        <section class="game-progress reveal" aria-label="Tu progreso global">
+          <div class="progress-main"><div class="progress-level-line"><div><span class="eyebrow">TU PROGRESO</span><h3 id="player-level">Aprendiz</h3></div><div class="xp-total"><strong id="total-xp">0</strong><span>XP</span></div></div><div class="global-progress-track" role="progressbar" aria-label="Progreso hacia el siguiente nivel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="global-progress-bar"></span></div><p class="next-level-copy" id="next-level-copy"></p></div>
+          <div class="badge-area"><div class="badge-heading"><span class="eyebrow">INSIGNIAS</span><span id="badge-count">0 / 7</span></div><div class="badge-list" id="badge-list" aria-live="polite"></div><button class="reset-progress" type="button" id="reset-progress">Reiniciar progreso</button></div>
+        </section>
+        <div class="game-tabs reveal" role="tablist" aria-label="Minijuegos del sílabo">
+          <button class="game-tab is-active" id="tab-route" type="button" role="tab" aria-selected="true" aria-controls="game-panel-route" data-game-tab="route"><span>01</span> La ruta</button>
+          <button class="game-tab" id="tab-memory" type="button" role="tab" aria-selected="false" aria-controls="game-panel-memory" data-game-tab="memory" tabindex="-1"><span>02</span> Memoria BI</button>
+          <button class="game-tab" id="tab-trivia" type="button" role="tab" aria-selected="false" aria-controls="game-panel-trivia" data-game-tab="trivia" tabindex="-1"><span>03</span> Trivia relámpago</button>
+          <button class="game-tab" id="tab-calendar" type="button" role="tab" aria-selected="false" aria-controls="game-panel-calendar" data-game-tab="calendar" tabindex="-1"><span>04</span> Carrera calendario</button>
+        </div>
+
+        <div class="game-panels">
+          <section class="game-panel is-active" id="game-panel-route" role="tabpanel" aria-labelledby="tab-route" data-game-panel="route">
+            <div class="game-panel-heading"><div><p class="eyebrow">JUEGO 01 / ORDENA EL CAMINO</p><h3>Rompecabezas de la ruta de aprendizaje</h3><p>Elige una pieza y colócala en la siguiente posición de su unidad. También puedes arrastrarla al tablero.</p></div><div class="game-score-chip"><span>XP DE RONDA</span><strong id="route-score">0</strong></div></div>
+            <div class="route-layout"><div class="route-bank-wrap"><div class="subpanel-heading"><h4>Piezas mezcladas</h4><span id="route-pieces-count">0 piezas</span></div><div class="route-piece-bank" id="route-piece-bank" aria-label="Piezas disponibles"></div></div><div class="route-boards" id="route-boards"></div></div>
+            <div class="game-feedback" id="route-feedback" role="status" aria-live="polite">Selecciona una pieza para comenzar.</div><button class="button button-primary game-restart" id="route-restart" type="button">Mezclar piezas <span aria-hidden="true">↻</span></button>
+          </section>
+
+          <section class="game-panel" id="game-panel-memory" role="tabpanel" aria-labelledby="tab-memory" data-game-panel="memory" hidden>
+            <div class="game-panel-heading"><div><p class="eyebrow">JUEGO 02 / ENCUENTRA LAS PAREJAS</p><h3>Memoria BI</h3><p>Relaciona conceptos del curso con su unidad o definición.</p></div><div class="game-metrics"><span><b id="memory-moves">0</b> intentos</span><span><b id="memory-time">00:00</b> tiempo</span><span><b id="memory-pairs">0 / 8</b> parejas</span></div></div>
+            <div class="memory-board" id="memory-board" aria-label="Tablero de memoria"></div><div class="game-feedback" id="memory-feedback" role="status" aria-live="polite">Voltea dos cartas para encontrar una pareja.</div><button class="button button-primary game-restart" id="memory-restart" type="button">Nueva partida <span aria-hidden="true">↻</span></button>
+          </section>
+
+          <section class="game-panel" id="game-panel-trivia" role="tabpanel" aria-labelledby="tab-trivia" data-game-panel="trivia" hidden>
+            <div class="game-panel-heading"><div><p class="eyebrow">JUEGO 03 / 15 SEGUNDOS POR RESPUESTA</p><h3>Trivia relámpago del sílabo</h3><p>Doce preguntas, tres vidas y puntos extra por mantener la racha.</p></div><div class="game-metrics trivia-metrics"><span><b id="trivia-score">0</b> XP ronda</span><span class="trivia-lives" id="trivia-lives" aria-label="3 vidas restantes">♥ ♥ ♥</span><span>Racha <b id="trivia-streak">0</b></span></div></div>
+            <div class="trivia-progress-line"><span id="trivia-counter">Pregunta 0 de 12</span><div class="trivia-progress-track" role="progressbar" aria-label="Progreso de la trivia" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><span id="trivia-progress"></span></div><span class="trivia-clock" id="trivia-clock">15</span></div>
+            <div class="trivia-content" id="trivia-content"><span class="eyebrow" id="trivia-topic">PON A PRUEBA LO QUE SABES</span><h4 id="trivia-question">¿Listo para la trivia?</h4><div class="trivia-options" id="trivia-options"></div><div class="trivia-feedback" id="trivia-feedback" role="status" aria-live="assertive" hidden></div></div>
+            <button class="button button-primary game-restart" id="trivia-start" type="button">Comenzar trivia <span aria-hidden="true">→</span></button><button class="button button-primary game-restart" id="trivia-next" type="button" hidden>Siguiente pregunta <span aria-hidden="true">→</span></button>
+          </section>
+
+          <section class="game-panel" id="game-panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" data-game-panel="calendar" hidden>
+            <div class="game-panel-heading"><div><p class="eyebrow">JUEGO 04 / ORDENA Y CALCULA</p><h3>Carrera contra el calendario</h3><p>Arrastra cada evaluación a su fecha correcta y ordénalas en la línea de tiempo.</p></div><div class="game-score-chip"><span>XP DE RONDA</span><strong id="calendar-score">0</strong></div></div>
+            <div class="calendar-game-layout"><div class="calendar-terms"><h4>Evaluaciones por ubicar</h4><div class="calendar-eval-bank" id="calendar-eval-bank"></div><p class="keyboard-hint">Con teclado: selecciona una evaluación y usa los botones de movimiento.</p></div><div class="calendar-targets"><h4>Arrastra a una fecha</h4><div class="calendar-slots" id="calendar-slots"></div></div></div>
+            <div class="calendar-actions"><button class="button button-primary" id="calendar-check" type="button">Comprobar fechas <span aria-hidden="true">→</span></button><button class="button button-primary" id="calendar-math-start" type="button" hidden>Resolver 3 retos rápidos <span aria-hidden="true">→</span></button></div>
+            <div class="calendar-feedback game-feedback" id="calendar-feedback" role="status" aria-live="polite">Mueve las tres evaluaciones a la línea de tiempo.</div>
+            <div class="calendar-math" id="calendar-math" hidden><p class="eyebrow">CÁLCULO RÁPIDO</p><h4 id="calendar-question"></h4><label class="math-answer-label" for="calendar-answer">Días de diferencia</label><div class="math-answer-row"><input id="calendar-answer" type="number" inputmode="numeric" min="0" step="1"><button class="button button-primary" id="calendar-submit" type="button">Responder</button></div><p class="calendar-math-feedback" id="calendar-math-feedback" role="status" aria-live="polite"></p></div>
+          </section>
+        </div>
+        <div class="celebration-layer" id="celebration-layer" aria-hidden="true"></div>
+        <p class="game-toast" id="game-toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A<span>.</span></span><span>Aula de datos</span></a><p>Material educativo de Business Intelligence · Sílabo UTC / CIYA.</p><span>© 2026 Aula de datos</span></div></footer>
+</body>
+</html>
