@@ -89,7 +89,8 @@
     project: {
       name: 'PlasTrack',
       title: 'Monitoreo Inteligente de Microplásticos mediante Datos Copernicus para la Conservación de Ecosistemas Insulares.',
-      description: 'La asignatura aporta fundamentos para transformar grandes volúmenes de datos satelitales (Copernicus, CMEMS) en información estratégica, diseñando dashboards, KPIs y sistemas de alerta temprana para el sector pesquero (CEIPA) y gestores ambientales.'
+      description: 'La asignatura aporta fundamentos para transformar grandes volúmenes de datos satelitales (Copernicus, CMEMS) en información estratégica, diseñando dashboards, KPIs y sistemas de alerta temprana para el sector pesquero (CEIPA) y gestores ambientales.',
+      tags: ['Copernicus', 'CMEMS', 'CEIPA', 'Dashboards · KPIs · alertas']
     },
   };
 

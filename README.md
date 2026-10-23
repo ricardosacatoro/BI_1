@@ -1,6 +1,6 @@
 # Aula de datos: fundamentos de Business Intelligence
 
-Sitio educativo de tres páginas construido con HTML5, CSS3 y JavaScript vanilla. Presenta conceptos de BI, un proceso ETL interactivo, un cuestionario, un dashboard de ejemplo de la Liga Pro Ecuador 2026 y un resumen académico del sílabo UTC.
+Sitio educativo construido con HTML5, CSS3 y JavaScript vanilla. Presenta conceptos de BI, un proceso ETL interactivo, un cuestionario, un dashboard de ejemplo de la Liga Pro Ecuador 2026 y el sílabo de la asignatura de Sistemas de Información para la Inteligencia de Negocios (UTC / CIYA).
 
 Los resultados de la liga son sintéticos y se muestran exclusivamente con fines educativos. No representan estadísticas oficiales.
 
@@ -16,7 +16,7 @@ Los resultados de la liga son sintéticos y se muestran exclusivamente con fines
 │   ├── styles.css
 │   ├── quiz.css
 │   ├── dashboard.css
-│   ├── silabo.css
+│   ├── curso.css
 ├── js/
 │   ├── main.js
 │   ├── quiz.js
@@ -31,7 +31,7 @@ Los resultados de la liga son sintéticos y se muestran exclusivamente con fines
 
 1. Abre el proyecto en Codespaces e instala la extensión **Live Server** si aún no está disponible.
 2. En el explorador de archivos, haz clic derecho en `index.html` y selecciona **Open with Live Server**.
-3. Usa los enlaces de la barra superior para alternar entre fundamentos, dashboard y sílabo.
+3. Usa los enlaces de la barra superior para alternar entre fundamentos, dashboard y sílabo. Dentro del sílabo, la navegación permite saltar entre resumen, evaluaciones, unidades, proyecto y docente.
 
 La página principal funciona con los archivos locales. El dashboard necesita conexión a internet para cargar Chart.js desde CDN; Google Fonts también se sirve desde CDN. No se necesita backend ni proceso de compilación.
 
@@ -45,7 +45,7 @@ En `js/data.js`, ajusta los equipos, su fortaleza simulada, capacidad estimada d
 
 ## Sílabo
 
-Abre `silabo.html` para consultar los datos generales de la asignatura, su objetivo, distribución horaria, fechas de evaluación, unidades, proyecto articulador y perfil docente.
+Abre `silabo.html` para consultar los datos generales de la asignatura, su objetivo, distribución horaria, fechas de evaluación, unidades, proyecto articulador y perfil docente. El enlace también está disponible al final de Fundamentos BI.
 
 El contenido editable está centralizado en `js/silabo-data.js`. `js/silabo.js` renderiza la ficha y la cuenta regresiva de evaluaciones.
 

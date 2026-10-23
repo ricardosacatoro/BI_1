@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Información clave de la asignatura Sistemas de Información para la Inteligencia de Negocios: objetivo, unidades, evaluaciones y proyecto.">
+  <meta name="description" content="Consulta el sílabo de Sistemas de Información para la Inteligencia de Negocios: objetivos, evaluaciones, unidades y proyecto.">
   <meta name="theme-color" content="#f4f7f5">
   <title>Sílabo | Aula de datos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/silabo.css">
+  <link rel="stylesheet" href="css/curso.css">
   <script src="js/main.js" defer></script>
   <script src="js/silabo-data.js" defer></script>
   <script src="js/silabo.js" defer></script>
 </head>
-<body class="silabo-page">
+<body class="course-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
     <nav class="navbar container" aria-label="Navegación principal">
@@ -24,29 +24,45 @@
       <div class="nav-links" id="nav-links">
         <a class="nav-link" href="index.html">Fundamentos BI</a>
         <a class="nav-link" href="dashboard.html">Dashboard Liga Pro</a>
-        <a class="nav-link nav-link-syllabus active" href="silabo.html" aria-current="page">Sílabo</a>
+        <a class="nav-link active" href="silabo.html" aria-current="page">Sílabo</a>
         <button class="theme-toggle icon-button" type="button" aria-label="Activar modo oscuro" title="Cambiar tema"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
       </div>
     </nav>
   </header>
 
   <main id="contenido">
-    <section class="silabo-hero" aria-labelledby="silabo-title">
-      <div class="container silabo-hero-inner">
-        <div class="silabo-hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> UNIVERSIDAD TÉCNICA DE COTOPAXI · CIYA</p>
-          <p class="hero-kicker" id="hero-code"></p>
-          <p class="hero-institution" id="hero-institution"></p>
+    <section class="course-hero" aria-labelledby="silabo-title">
+      <div class="container course-hero-inner">
+        <div class="course-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> INFORMACIÓN DE LA ASIGNATURA</p>
+          <p class="course-code" id="hero-code"></p>
           <h1 id="silabo-title"></h1>
-          <p class="silabo-hero-lede" id="hero-description"></p>
+          <p class="course-hero-lede" id="hero-description"></p>
           <a class="button button-primary" href="#resumen">Ver información clave <span aria-hidden="true">↓</span></a>
         </div>
+        <aside class="course-identity" aria-label="Institución y periodo académico">
+          <p class="course-institution" id="hero-institution"></p>
+          <div class="identity-rule"></div>
+          <p><span>Modalidad</span><strong id="hero-cycle"></strong></p>
+          <p><span>Créditos</span><strong id="hero-credits"></strong></p>
+          <p><span>Periodo</span><strong id="hero-period"></strong></p>
+        </aside>
       </div>
     </section>
 
+    <nav class="course-nav" aria-label="Secciones del sílabo">
+      <div class="container course-nav-inner">
+        <a href="#resumen">Resumen</a>
+        <a href="#evaluaciones">Evaluaciones</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#proyecto">Proyecto</a>
+        <a href="#docente">Docente</a>
+      </div>
+    </nav>
+
     <section class="section section-paper" id="resumen" aria-labelledby="summary-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">DATOS CLAVE</p><h2 id="summary-title">La asignatura en breve</h2><p id="subject-description"></p></div>
+        <div class="section-heading reveal"><p class="eyebrow">01 / DATOS CLAVE</p><h2 id="summary-title">La asignatura en breve</h2><p id="subject-description"></p></div>
         <div class="summary-layout">
           <div class="general-grid reveal" id="general-cards" aria-label="Datos generales de la asignatura"></div>
           <article class="hours-panel reveal" aria-labelledby="hours-title">
@@ -62,7 +78,7 @@
 
     <section class="section" id="evaluaciones" aria-labelledby="evaluation-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">CALENDARIO ACADÉMICO</p><h2 id="evaluation-title">Fechas de evaluación</h2><p>Las evaluaciones cierran a las 23:59:59 de la fecha indicada.</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">02 / CALENDARIO ACADÉMICO</p><h2 id="evaluation-title">Fechas de evaluación</h2><p>Las evaluaciones cierran a las 23:59:59 de la fecha indicada.</p></div>
         <div class="countdown-banner reveal"><div class="countdown-copy"><span class="countdown-symbol" aria-hidden="true">◷</span><div><p class="eyebrow" id="countdown-label">PRÓXIMO CIERRE</p><h3 id="countdown-title" aria-live="polite">Calculando fecha…</h3></div></div><div class="countdown-clock" id="countdown" role="timer" aria-label="Cuenta regresiva a la próxima evaluación"></div></div>
         <ol class="evaluation-timeline reveal" id="evaluation-timeline" aria-label="Cronograma de evaluaciones"></ol>
       </div>
@@ -70,7 +86,7 @@
 
     <section class="section section-paper" id="unidades" aria-labelledby="units-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">CONTENIDOS PRINCIPALES</p><h2 id="units-title">Tres unidades de aprendizaje</h2><p>Resultados, temas centrales, metodología y evaluación de cada unidad.</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">03 / CONTENIDOS PRINCIPALES</p><h2 id="units-title">Tres unidades de aprendizaje</h2><p>Resultados, temas centrales, metodología y evaluación de cada unidad.</p></div>
         <div class="unit-list" id="unit-list"></div>
       </div>
     </section>
@@ -83,7 +99,15 @@
       <div class="container teacher-layout reveal"><div class="teacher-monogram" id="teacher-monogram" aria-hidden="true"></div><div class="teacher-copy"><p class="eyebrow">DOCENTE DE LA ASIGNATURA</p><h2 id="teacher-title"></h2><a class="teacher-email" id="teacher-email"></a><p id="teacher-profile"></p></div><div class="teacher-school"><span>UTC</span><span>CIYA</span><span>SISTEMAS<br>DE INFORMACIÓN</span></div></div>
     </section>
 
+    <section class="course-next" aria-label="Continuar explorando Aula de datos">
+      <div class="container course-next-inner">
+        <p class="eyebrow">CONTINÚA EXPLORANDO</p>
+        <a href="index.html">Volver a Fundamentos BI <span aria-hidden="true">→</span></a>
+        <a href="dashboard.html">Abrir Dashboard Liga Pro <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A<span>.</span></span><span>Aula de datos</span></a><p>Material educativo de Business Intelligence · Sílabo UTC / CIYA.</p><span>© 2026 Aula de datos</span></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">A<span>.</span></span><span>Aula de datos</span></a><p>Material educativo de Business Intelligence · UTC / CIYA.</p><span>© 2026 Aula de datos</span></div></footer>
 </body>
 </html>

@@ -19,6 +19,9 @@
   function renderHero() {
     document.getElementById('hero-code').textContent = `${data.general.code} · CICLO ${data.general.cycleNumber} · PARALELO ${data.general.parallel}`;
     document.getElementById('hero-institution').textContent = `${data.general.university} · Sede ${data.general.campus} · Facultad ${data.general.faculty}`;
+    document.getElementById('hero-cycle').textContent = `${data.general.cycle} · Paralelo ${data.general.parallel}`;
+    document.getElementById('hero-credits').textContent = String(data.general.credits);
+    document.getElementById('hero-period').textContent = `${formatDate(data.general.periodStart, { day: '2-digit', month: 'short' })} – ${formatDate(data.general.periodEnd, { day: '2-digit', month: 'short', year: 'numeric' })}`;
     document.getElementById('silabo-title').textContent = data.general.subject;
     document.getElementById('hero-description').textContent = 'Información esencial del curso: objetivos, contenidos, dedicación académica y evaluaciones del periodo.';
     document.getElementById('subject-description').textContent = data.description;
@@ -99,7 +102,7 @@
   function renderProject() {
     document.getElementById('project-title').textContent = data.project.title;
     document.getElementById('project-description').textContent = data.project.description;
-    document.getElementById('project-tags').innerHTML = ['Copernicus', 'CMEMS', 'CEIPA', 'Dashboards · KPIs · alertas'].map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
+    document.getElementById('project-tags').innerHTML = data.project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
   }
 
   function renderTeacher() {
